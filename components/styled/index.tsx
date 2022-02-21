@@ -56,3 +56,19 @@ export const SubText = styled.p`
   /* padding-top: 2rem; */
   width: 295px;
 `;
+
+export const ProductCardContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+`;
+
+export const SocialMediaBg = styled.div`
+  background-image: url("/icons_bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  height: 309px;
+`;

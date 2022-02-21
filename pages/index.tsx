@@ -1,6 +1,7 @@
 import NavBar from "components/NavBar";
 import { MainPage, MainPageContainer, MainPageBreak } from "components/PageOne/styles";
-import { Button, Heading, SubText } from "components/styled";
+import ProductCard from "components/ProductCard";
+import { Button, Heading, SubText, ProductCardContainer, SocialMediaBg } from "components/styled";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -21,6 +22,14 @@ const Home: NextPage = () => {
           <SubText>Easily host and share events with your friends across any social media.</SubText>
           <MainPageBreak />
           <Button cta>🎉 Create my next event</Button>
+          <MainPageBreak />
+          <SocialMediaBg>
+            <ProductCardContainer>
+              <ProductCard src="/card_left.png" />
+              <ProductCard src="/card_middle.png" large />
+              <ProductCard src="/card_right.png" />
+            </ProductCardContainer>
+          </SocialMediaBg>
         </MainPageContainer>
       </MainPage>
     </div>
