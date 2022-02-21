@@ -1,13 +1,15 @@
 import NavBar from "components/NavBar";
 import ProductCard from "components/ProductCard";
 import { Button, Heading, SubText, ProductCardContainer, SocialMediaBg, MainPage, PageBreak, PageContainer } from "components/styled";
+import TextInput from "components/TextInput";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { SyntheticEvent } from "react";
+import { SyntheticEvent, useState } from "react";
 
 const Create: NextPage = () => {
+  const [eventName, setEventName] = useState("");
   return (
     <div>
       <Head>
@@ -20,10 +22,7 @@ const Create: NextPage = () => {
         <PageContainer>
           <Heading>Create your Event</Heading>
           <PageBreak />
-          <SubText>Easily host and share events with your friends across any social media.</SubText>
-          <PageBreak />
-          <Button cta>🎉 Create my next event</Button>
-          <PageBreak />
+          <TextInput name="eventName" placeholder="Georgia's B'day" value={eventName} setValue={setEventName} label="Event Name" />
         </PageContainer>
       </MainPage>
     </div>
