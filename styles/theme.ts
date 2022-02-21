@@ -1,6 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 export const theme: DefaultTheme = {
+  borderRadius: "100px",
   colors: {
     primary: {
       purple: "#501FC1",
@@ -8,6 +9,7 @@ export const theme: DefaultTheme = {
     },
     secondary: {
       blue: "#33AAFF",
+      blueGradient: "#5794F7",
       green: "#06D6A0",
       pink: "#F0567A",
     },

@@ -2,6 +2,7 @@ import "styled-components";
 
 declare module "styled-components" {
   export interface DefaultTheme {
+    borderRadius: string;
     colors: {
       primary: {
         purple: string;
@@ -9,6 +10,7 @@ declare module "styled-components" {
       };
       secondary: {
         blue: string;
+        blueGradient: string;
         green: string;
         pink: string;
       };
