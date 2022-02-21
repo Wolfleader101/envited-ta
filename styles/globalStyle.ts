@@ -14,6 +14,8 @@ const GlobalStyle = createGlobalStyle`
 html {
 	scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif;
+  color: white;
+  letter-spacing: -0.32px;
 }
 /* Remove default margin */
 body,

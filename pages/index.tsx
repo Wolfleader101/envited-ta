@@ -1,5 +1,6 @@
 import NavBar from "components/NavBar";
-import { Button, MainPage } from "components/styled";
+import { MainPage, MainPageContainer } from "components/PageOne/styles";
+import { Heading, SubText } from "components/styled";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -14,6 +15,10 @@ const Home: NextPage = () => {
       </Head>
       <MainPage>
         <NavBar />
+        <MainPageContainer>
+          <Heading>Facebook events without Facebook.</Heading>
+          <SubText>Easily host and share events with your friends across any social media.</SubText>
+        </MainPageContainer>
       </MainPage>
     </div>
   );
