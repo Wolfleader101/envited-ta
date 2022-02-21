@@ -28,18 +28,17 @@ type ButtonProps = {
 export const Button = styled.button<ButtonProps>`
   border: none;
 
-  padding: 0.5rem 1.5rem;
-  font-size: 12px;
-  color: white;
+  padding: ${(props) => (props.cta ? "1rem 1.5rem" : "0 1.5rem")};
+  font-size: ${(props) => (props.cta ? "16px" : "12px")};
   font-weight: 700;
   line-height: 21px;
+  color: white;
 
-  /* background: linear-gradient(
+  background: linear-gradient(
     107.04deg,
-    ${(props) => props.theme.colors.secondary.green} 48.99%,
-    ${(props) => props.theme.colors.secondary.blueGradient} 118.32%
-  ); */
-  background: linear-gradient(107.04deg, #c346d5 52.6%, #501fc1 118.32%);
+    ${(props) => (props.cta ? props.theme.colors.secondary.green : props.theme.colors.primary.pink)} 52.6%,
+    ${(props) => (props.cta ? props.theme.colors.secondary.blueGradient : props.theme.colors.primary.purple)} 118.32%
+  );
   border-radius: ${(props) => props.theme.borderRadius};
 `;
 
@@ -54,6 +53,6 @@ export const SubText = styled.p`
   font-size: 15px;
   line-height: 20px;
   text-align: center;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   width: 295px;
 `;

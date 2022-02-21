@@ -9,4 +9,7 @@ export const MainPageContainer = styled(Container)`
   margin-top: 8rem;
 `;
 
+export const MainPageBreak = styled.div`
+  padding: 1rem;
+`;
 // export const MainPageHeader = styled(Header)``
