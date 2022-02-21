@@ -2,24 +2,13 @@ import DateSelector from "components/DateSelector";
 import FileInput from "components/FileInput";
 import ImageCanvas from "components/ImageCanvas";
 import NavBar from "components/NavBar";
-import ProductCard from "components/ProductCard";
-import {
-  Button,
-  Heading,
-  SubText,
-  ProductCardContainer,
-  SocialMediaBg,
-  MainPage,
-  PageBreak,
-  PageContainer,
-  RowContainer,
-  Page,
-} from "components/styled";
+import { Heading, MainPage, PageBreak, RowContainer, Container, Button } from "components/styled";
 import TextInput from "components/TextInput";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { SyntheticEvent, useState, useEffect } from "react";
+import styled from "styled-components";
 
 const Create: NextPage = () => {
   const [eventName, setEventName] = useState("");
@@ -33,6 +22,10 @@ const Create: NextPage = () => {
   const [imageHeight, setImageHeight] = useState(0);
   const [imageStyleWidth, setImageStyleWidth] = useState(0);
   const [imageStyleHeight, setImageStyleHeight] = useState(0);
+
+  const CreatePageContainer = styled(Container)`
+    margin-top: 3rem;
+  `;
 
   const calculateImage = (imgUrl: string, getDim = false, setStyle = false) => {
     const img = new Image();
@@ -81,7 +74,7 @@ const Create: NextPage = () => {
       </Head>
       <MainPage>
         <NavBar />
-        <PageContainer>
+        <CreatePageContainer>
           <Heading>Create your Event</Heading>
           <PageBreak />
           <RowContainer>
@@ -99,7 +92,10 @@ const Create: NextPage = () => {
           <PageBreak />
           <FileInput setFile={setImage} />
           {imageUrl != "" ? <ImageCanvas imageUrl={imageUrl} styleWidth={imageStyleWidth} styleHeight={imageStyleHeight} /> : null}
-        </PageContainer>
+          {eventName != "" && hostName != "" && startTime != "" && endTime != "" && location != "" && imageUrl != "" ? (
+            <Button cta>Next!</Button>
+          ) : null}
+        </CreatePageContainer>
       </MainPage>
     </div>
   );
