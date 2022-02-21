@@ -1,8 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-[Deployed on Vercel!](https://envited-ta.vercel.app/)
+Envited Is [Deployed on Vercel!](https://envited-ta.vercel.app/)
 
 First, run the development server:
 
