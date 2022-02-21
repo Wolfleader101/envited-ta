@@ -1,4 +1,4 @@
-import { Container } from "components/Styled";
+import { Container } from "components/styled";
 import styled from "styled-components";
 import Image from "next/image";
 
