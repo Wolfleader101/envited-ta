@@ -19,6 +19,7 @@ const TextInput = ({ placeholder, name, label, value, setValue }: Props) => {
         type="text"
         name={name}
         value={value}
+        placeholder={placeholder}
         onChange={(e) => setValue(e.target.value)}
         onFocus={(e) => setFocus(true)}
         onBlur={(e) => setFocus(false)}

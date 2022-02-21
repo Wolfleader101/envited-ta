@@ -1,6 +1,7 @@
+import DateSelector from "components/DateSelector";
 import NavBar from "components/NavBar";
 import ProductCard from "components/ProductCard";
-import { Button, Heading, SubText, ProductCardContainer, SocialMediaBg, MainPage, PageBreak, PageContainer } from "components/styled";
+import { Button, Heading, SubText, ProductCardContainer, SocialMediaBg, MainPage, PageBreak, PageContainer, RowContainer } from "components/styled";
 import TextInput from "components/TextInput";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -10,6 +11,10 @@ import { SyntheticEvent, useState } from "react";
 
 const Create: NextPage = () => {
   const [eventName, setEventName] = useState("");
+  const [hostName, setHostName] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
+
   return (
     <div>
       <Head>
@@ -23,6 +28,13 @@ const Create: NextPage = () => {
           <Heading>Create your Event</Heading>
           <PageBreak />
           <TextInput name="eventName" placeholder="Georgia's B'day" value={eventName} setValue={setEventName} label="Event Name" />
+          <PageBreak />
+          <TextInput name="hostName" placeholder="Georgia" value={hostName} setValue={setHostName} label="Host's Name" />
+          <PageBreak />
+          <RowContainer>
+            <DateSelector name="StartTime" value={startTime} setValue={setStartTime} label="Start Time" />
+            <DateSelector name="EndTime" value={endTime} setValue={setEndTime} label="End Time" />
+          </RowContainer>
         </PageContainer>
       </MainPage>
     </div>

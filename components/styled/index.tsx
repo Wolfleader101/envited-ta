@@ -26,6 +26,14 @@ export const Container = styled.div`
   align-content: center;
 `;
 
+export const RowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+`;
+
 export const PageContainer = styled(Container)`
   margin-top: 8rem;
 `;
