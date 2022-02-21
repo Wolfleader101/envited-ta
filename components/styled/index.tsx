@@ -14,12 +14,24 @@ export const Page = styled.div`
   align-content: center;
 `;
 
+export const MainPage = styled(Page)`
+  background: linear-gradient(163.63deg, ${(props) => props.theme.colors.primary.purple} 12.2%, ${(props) => props.theme.colors.primary.pink} 96.78%);
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
+`;
+
+export const PageContainer = styled(Container)`
+  margin-top: 8rem;
+`;
+
+export const PageBreak = styled.div`
+  padding: 1rem;
 `;
 
 type ButtonProps = {
@@ -40,6 +52,8 @@ export const Button = styled.button<ButtonProps>`
     ${(props) => (props.cta ? props.theme.colors.secondary.blueGradient : props.theme.colors.primary.purple)} 118.32%
   );
   border-radius: ${(props) => props.theme.borderRadius};
+
+  cursor: pointer;
 `;
 
 export const Heading = styled.h1`
