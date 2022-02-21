@@ -29,7 +29,7 @@ export const Container = styled.div`
 export const RowContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
 `;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 export const StyledInput = styled.input`
@@ -28,6 +28,7 @@ export const StyledInput = styled.input`
     border-color: ${(props) => props.theme.colors.secondary.green};
     border-radius: ${(props) => props.theme.borderRadius};
   }
+  width: 75%;
 `;
 
 type LabelProps = {
